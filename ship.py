@@ -4,7 +4,10 @@ class Ship():
         """初始化飞船并设置其位置"""
         self.screen = screen
         """加载飞船图像并获取其外接矩形"""
-        self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/ship.bmp")
+        """mac setting"""
+        #self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/ship.bmp")
+        """windows setting"""
+        self.image = pygame.image.load("images\ship.bmp")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         """将每艘飞船放在屏幕底部中央"""
@@ -23,7 +26,10 @@ class Ship():
 class Boss():
     def __init__(self,screen):
         self.screen = screen
-        self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/python.jpg")
+        """mac setting"""
+        #self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/python.jpg")
+        """windows setting"""
+        self.image = pygame.image.load("images\python.jpg")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         self.rect.centerx = self.screen_rect.centerx
