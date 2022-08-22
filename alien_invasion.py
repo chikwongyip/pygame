@@ -11,7 +11,7 @@ def run_game():
     screen = pygame.display.set_mode((ai_setting.screen_width,ai_setting.screen_height))
     pygame.display.set_caption("Alien Invasion")
     pygame.image
-    ship = Ship(screen)
+    ship = Ship(ai_setting,screen)
     boss = Boss(screen)
     """开始游戏"""
     while True:
@@ -21,11 +21,7 @@ def run_game():
         screen.fill(ai_setting.bg_color)
         ship.blitme()
         boss.blitme()
-        # 监视键盘和鼠标事件
-        # for event in pygame.event.get():
-        #     if event.type == pygame.QUIT:
-        #         sys.exit()
-        
+        # 监视键盘和鼠标事件      
         pygame.display.flip()
 
 run_game()
