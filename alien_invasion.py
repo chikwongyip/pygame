@@ -16,14 +16,14 @@ def run_game():
     #boss = Boss(screen)
     """开始游戏"""
     while True:
-        gf.check_events(ship)
+        gf.check_events(ai_setting, screen, ship, bullets)
         ship.update()
         bullets.update()
-        gf.update_screen(ai_setting, screen, ship)
+        gf.update_screen(ai_setting, screen, ship, bullets)
         screen.fill(ai_setting.bg_color)
         ship.blitme()
-        boss.blitme()
+        #boss.blitme()
         # 监视键盘和鼠标事件      
         pygame.display.flip()
 
-run_game()
+runaaa_game()

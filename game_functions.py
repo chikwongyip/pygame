@@ -1,14 +1,18 @@
 import sys
 import pygame
+from bullet import Bullet
 def check_events(ship):
     """响应按键和鼠标事件"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            check_key_down_events(event,ship)
+            check_key_down_events(event, ship)
         elif event.type == pygame.KEYUP:
-            check_keyup_events(event,ship)
+            check_keyup_events(event, ship)
+        elif event.key == pygame.K_SPACE:
+            new_bullet = Bullet(ai_setting,screen,ship)
+            bullets.add(new_bullet)
             
 
 
