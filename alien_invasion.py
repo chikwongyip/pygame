@@ -3,6 +3,7 @@ import pygame
 import game_functions as gf
 from setting import Settings
 from ship import Ship,Boss
+from pygame.sprite import Group
 
 def run_game():
     """初始化游戏"""
@@ -10,13 +11,14 @@ def run_game():
     ai_setting = Settings()
     screen = pygame.display.set_mode((ai_setting.screen_width,ai_setting.screen_height))
     pygame.display.set_caption("Alien Invasion")
-    pygame.image
     ship = Ship(ai_setting,screen)
-    boss = Boss(screen)
+    bullets = Group()
+    #boss = Boss(screen)
     """开始游戏"""
     while True:
         gf.check_events(ship)
         ship.update()
+        bullets.update()
         gf.update_screen(ai_setting, screen, ship)
         screen.fill(ai_setting.bg_color)
         ship.blitme()
