@@ -26,4 +26,4 @@ def run_game():
         # 监视键盘和鼠标事件      
         pygame.display.flip()
 
-runaaa_game()
+run_game()

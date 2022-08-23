@@ -7,9 +7,9 @@ class Ship():
         self.ai_settings = ai_settings
         """加载飞船图像并获取其外接矩形"""
         """mac setting"""
-        self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/ship.bmp")
+        #self.image = pygame.image.load("/Users/chikwongyip/PycharmProjects/pygame/images/ship.bmp")
         """windows setting"""
-        #self.image = pygame.image.load("images\ship.bmp")
+        self.image = pygame.image.load("images\ship.bmp")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         """将每艘飞船放在屏幕底部中央"""
